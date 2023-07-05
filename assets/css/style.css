@@ -1,0 +1,210 @@
+
+.toplevel_page_feedback .give_feedback_container,.clarity_page_employees_1to1_meeting .employees_1to1{
+  width: 75%;
+}
+.feedback_container{
+  margin: 1rem 10px 0 5px;
+}
+
+.toplevel_page_feedback .feedback-btns-row{
+    display: flex;
+    gap: 20px;
+}
+
+label{
+    cursor: default;
+}
+.feedbackbtn{
+    background: #E9F4FC;
+    border: 1px solid #B8CDEC;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.toplevel_page_feedback .feedback-form .badge{
+    background: #EAECF1;
+    color: #000;
+    font-size: 17px;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 20px;
+    margin: 5px;
+}
+.toplevel_page_feedback .feedback-form {
+ display: none;
+}
+
+.PillList-item input[type="checkbox"] {
+    display: none;
+  }
+  .PillList-item input[type="checkbox"]:checked + .PillList-label {
+    /* background-color: #E9F4FC; */
+    border: 1px solid #E9F4FC;
+    color: #35363c;
+  }
+  .PillList-label {
+    border-radius: 20px;
+    color: #35363c;
+    display: block;
+    padding: 7px 28px;
+    text-decoration: none;
+  }
+  .PillList-item
+    input[type="checkbox"]:checked
+    + .PillList-label
+    .Icon--checkLight {
+    display: inline-block;
+  }
+  .PillList-item input[type="checkbox"]:checked + .PillList-label .Icon--addLight,
+  .PillList-label .Icon--checkLight,
+  .PillList-children {
+    display: none;
+  }
+  .PillList-label .Icon {
+    width: 12px;
+    height: 12px;
+    margin: 0 0 0 12px;
+  }
+  .Icon--smallest {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .Icon {
+    background: transparent;
+    display: inline-block;
+    font-style: normal;
+    vertical-align: baseline;
+    position: relative;
+  }
+  
+  .clarity_page_view-feedback .card-usernames.by{
+  background: #6DB5D6;
+  }
+
+  .clarity_page_view-feedback .card-usernames.to{
+    background: #FAC64E;
+  }
+
+  .card-usernames{
+    border-radius: 50%;
+    padding: 8px 11px;
+    color: #ffffff;
+  }
+  .clarity_page_view-feedback .suggestedmsg{
+    border-radius: 20px;
+    color: #000;
+    padding: 10px 18px;
+    text-decoration: none;
+    background: #EAECF1;
+    margin: 5px;
+  }
+  .clarity_page_view-feedback .feedback-received-cards{
+    margin: auto;
+  }
+  .alert{
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+
+  .feedback_container .scroll-table{
+    overflow-x: auto;
+  }
+  .feedback_container .table{
+    width: 1200px;
+    border-top: 2px solid #C6CEDD;
+    overflow-x: scroll;
+  }
+  .feedback_container .table ul{
+    list-style: disc;
+  }
+  .feedback_container thead{
+    border-left: 1px solid #C6CEDD;
+    border-bottom: 2px solid #C6CEDD;
+  }
+  .feedback_container .view-growth-track .row{
+    border-top: 2px solid #C6CEDD;
+  }
+  .feedback_container .scroll-table table td,.feedback_container .scroll-table table th{
+    border-right: 1px solid #C6CEDD;
+    border-left: 1px solid #C6CEDD;
+    max-width: 100px;
+    font-size: 15px;
+  }
+.role-btns{
+  white-space: nowrap;
+  font-weight: 500 !important;
+  cursor: pointer;
+}
+.role-btns:hover, .role-btns:active{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.browse-templates{
+border: 1px solid grey !important;
+width: 100%;
+}
+.tgl {
+  display: none !important;
+}
+.tgl + .tgl-btn {
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.tgl-light + .tgl-btn {
+  background: #f0f0f0;
+  border-radius: 2em;
+  padding: 2px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+.tgl-light + .tgl-btn:after {
+  border-radius: 50%;
+  background: #fff;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.tgl-light:checked + .tgl-btn {
+  background: #3673CE;
+}
+.cursor{
+  cursor: pointer;
+}
+.templateInputs{
+  width: 100%;
+}
+.clarity_page_employees_1to1_meeting ::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+.one_to_oneby{
+background: #EF7677;
+}
+.one_to_one_usersList{
+  border-bottom: 1px solid #EEF0F5;
+}
+.oneTo1Btn{
+padding: 10px 20px !important;
+font-size: 1rem !important;
+}
