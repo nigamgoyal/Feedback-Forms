@@ -3,7 +3,7 @@
  * Plugin Name:       Feedback Forms
  * Description:      A powerful WordPress plugin for feedback, communication, and growth in organizations. It enables employees to easily give and receive feedback, request feedback from colleagues, and schedule one-on-one meetings. Enhances collaboration, productivity, and career development.
  * Plugin URI:      https://wordpress.org/plugins/feedback-forms/
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author: Growbiz Solutions
  * Author URI: https://github.com/
  * License: GPL-3.0+

@@ -143,6 +143,24 @@ function employee_feedback_page()
                                 <span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
                             </span>
                         </label>
+                        <label class="badge rounded-pill PillList-item">
+                            <input type="checkbox" name="suggestedmsg[]" value="Debate then Commit">
+                            <span class="PillList-label">Debate then Commit
+                                <span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
+                            </span>
+                        </label>
+                        <label class="badge rounded-pill PillList-item">
+                            <input type="checkbox" name="suggestedmsg[]" value="Build with Humility">
+                            <span class="PillList-label">Build with Humility
+                                <span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
+                            </span>
+                        </label>
+                        <label class="badge rounded-pill PillList-item">
+                            <input type="checkbox" name="suggestedmsg[]" value="Builder Mindset">
+                            <span class="PillList-label">Builder Mindset
+                                <span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
+                            </span>
+                        </label>
                     </div>
                 </div>
                 <input type="submit" class="button button-primary float-end share" name="submitfeedback" value="Share Feedback">

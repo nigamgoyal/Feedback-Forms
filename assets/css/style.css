@@ -1,5 +1,5 @@
 
-.toplevel_page_feedback .give_feedback_container,.clarity_page_employees_1to1_meeting .employees_1to1{
+.toplevel_page_feedback .give_feedback_container,.feedback_page_employees_1to1_meeting .employees_1to1{
   width: 75%;
 }
 .feedback_container{
@@ -78,11 +78,11 @@ label{
     position: relative;
   }
   
-  .clarity_page_view-feedback .card-usernames.by{
+  .feedback_page_view-feedback .card-usernames.by{
   background: #6DB5D6;
   }
 
-  .clarity_page_view-feedback .card-usernames.to{
+  .feedback_page_view-feedback .card-usernames.to{
     background: #FAC64E;
   }
 
@@ -91,7 +91,7 @@ label{
     padding: 8px 11px;
     color: #ffffff;
   }
-  .clarity_page_view-feedback .suggestedmsg{
+  .feedback_page_view-feedback .suggestedmsg{
     border-radius: 20px;
     color: #000;
     padding: 10px 18px;
@@ -99,7 +99,7 @@ label{
     background: #EAECF1;
     margin: 5px;
   }
-  .clarity_page_view-feedback .feedback-received-cards{
+  .feedback_page_view-feedback .feedback-received-cards{
     margin: auto;
   }
   .alert{
@@ -195,7 +195,7 @@ width: 100%;
 .templateInputs{
   width: 100%;
 }
-.clarity_page_employees_1to1_meeting ::-webkit-calendar-picker-indicator {
+.feedback_page_employees_1to1_meeting ::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 .one_to_oneby{
