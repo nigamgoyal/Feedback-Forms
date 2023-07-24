@@ -47,33 +47,45 @@ function view_feedback_callback()
 ?>
             <div class="row viewFeedback">
                 <?php foreach ($results as $user) { ?>
+                    <?php if($user->sent_by_userid == $current_user->ID){
+                        $bg = 'recievedbg'; 
+                        $dateMsg = 'Feedback Sent On: ';
+                        $usrnamebg = 'by';
+                        $usrnamebgdiff = 'to';
+                    }
+                    else {
+                        $bg = 'sentbg';  
+                        $dateMsg = 'Feedback Recieved On: ';
+                        $usrnamebg = 'to';
+                        $usrnamebgdiff = 'by';
+                    } ?>
                     <div class="col-8 feedback-received-cards">
-                        <div class="card mb-3">
+                        <div class="card mb-3 <?php echo $bg;?>">
                             <div>
-                                <span><span class="card-usernames by"><?php echo initials($user->sent_by_username); ?></span>
+                                <span><span class="card-usernames <?php echo $usrnamebg ?>"><?php echo initials($user->sent_by_username); ?></span>
                                     <?php echo (capitalizeWords($user->sent_by_username)); ?>
                                 </span>
-                                <span class="float-end"><span class="card-usernames to"><?php echo initials($user->sent_to_username);  ?></span>
+                                <span class="float-end"><span class="card-usernames <?php echo $usrnamebgdiff; ?>"><?php echo initials($user->sent_to_username);  ?></span>
                                     <?php echo (capitalizeWords($user->sent_to_username)); ?>
                                 </span>
                             </div>
                             <div class="card-body">
-                                <p class="card-text"><?php echo ($user->feedback_message); ?></p>
+                                <p class="card-text"><?php echo nl2br($user->feedback_message); ?></p>
                                 <div class="mb-2 mt-2">
                                     <label class="badge rounded-pill PillList-item d-flex flex-wrap">
 
                                         <?php
-                                        $suggestedmsgs = explode('|', $user->suggested_message);
-                                        foreach ($suggestedmsgs as $suggestedmsg) { ?>
+                                        if(!empty(($user->suggested_message))){
+                                            $suggestedmsgs = explode('|', $user->suggested_message);
 
-                                            <span class="suggestedmsg"><?php echo $suggestedmsg; ?></span>
+                                            foreach ($suggestedmsgs as $suggestedmsg) { ?>
 
-                                        <?php } ?>
+                                                <span class="suggestedmsg"><?php echo $suggestedmsg; ?></span>
+    
+                                            <?php } 
+                                        } ?>
                                     </label>
                                 </div>
-                                <?php if($user->sent_by_userid == $current_user->ID) 
-                                $dateMsg = 'Feedback Sent On: ';
-                                else $dateMsg = 'Feedback Recieved On: ';  ?>
                                 <p class="card-text text-end"><?php echo $dateMsg. date_format(new DateTime($user->feedback_send_date), "d/m/Y"); ?></p>
                             </div>
                         </div>

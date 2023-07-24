@@ -3,6 +3,7 @@
 function employee_feedback_page()
 {
     ob_start(); // Start output buffering 
+    $current_user = wp_get_current_user();
     if (isset($_POST['submitfeedback']) && $_POST['submitfeedback'] == 'Share Feedback') {
         $empid = $_POST['empid'] ?? '';
         $empname = $_POST['empname'] ?? '';
@@ -25,7 +26,6 @@ function employee_feedback_page()
             if ($wpdb->get_var("SHOW TABLES LIKE '$table_name'") !== $table_name) {
                 echo "<p class='alert alert-danger'>Oops! Table does not found, so feedbacks cannot be inserted!</p>";
             } else {
-                $current_user = wp_get_current_user();
                 $userID = get_user_by('id', $empid);
                 if ($userID && $userID->display_name === $empname) {
                     $data = array(
@@ -74,10 +74,9 @@ function employee_feedback_page()
 
         $requestedNameerror = (empty($requestedEmpId) || $requestedEmpName === '') ? "Please select employee name." : '';
         if (empty($requestedNameerror)) {
-            $current_user = wp_get_current_user();
             $userID = get_user_by('id', $requestedEmpId);
             $to = $userID->user_email;
-            $subject = 'You have requested for feedback';
+            $subject = 'You are requested to give feedback';
             $message = 'Hi ' . userFirstname($userID->display_name) . ',</br></br>'
             .capitalizeWords($current_user->display_name) . ' has requested feedback. We would appreciate it if you could spare some time to provide '.capitalizeWords($current_user->display_name) .' with feedback.</br></br> Please login to employee portal to give feedback.</br>
                         <a href="' . esc_url(home_url('/login')) . '">Click Here</a> </br></br>Thank You';
@@ -90,7 +89,10 @@ function employee_feedback_page()
         else echo "<p class='alert alert-danger'>Oops! User not found!</p>";
     }
 
-    $users = get_users(array('role__in' => array('employee'))); ?>
+    $users = get_users(array(
+        'role__in'     => array('employee'),
+        'exclude'      => array($current_user->ID),
+    )); ?>
     <!-- form HTML goes here -->
     <div class="give_feedback_container feedback_container">
         <h3>Feedback</h3>

@@ -78,13 +78,22 @@ label{
     position: relative;
   }
   
-  .feedback_page_view-feedback .card-usernames.by{
-  background: #6DB5D6;
+  .feedback_page_view-feedback .card-usernames.by, .byy{
+  background: #7eab5b;
   }
 
-  .feedback_page_view-feedback .card-usernames.to{
-    background: #FAC64E;
+  .viewFeedback .recievedbg{
+    border: 2px solid #DCF8C6;
   }
+
+  .viewFeedback .sentbg{
+    border: 2px solid #B2EBF2;
+  }
+
+  .feedback_page_view-feedback .card-usernames.to, .too{
+    background: #47959e;
+  }
+
 
   .card-usernames{
     border-radius: 50%;
